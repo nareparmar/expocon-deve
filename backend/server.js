@@ -17,7 +17,11 @@ import cors from "cors";
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['https://expocon-front.vercel.app'], // Replace with your frontend URL
+  credentials: true,
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+}));
 app.use(express.json());
 
 app.use("/api/v1/auth", userRouter);
