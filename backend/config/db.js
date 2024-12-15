@@ -3,8 +3,7 @@ import colors from 'colors';
 
 const connectDB = async () => {
     try {
-        console.log(process.env.MONGO_URL);
-        const conn = await mongoose.connect(process.env.MONGO_URL);
+        const conn = await mongoose.connect("mongodb+srv://vaibhavswellfounded:Admin123@expocon.ojs4ov4.mongodb.net/test?retryWrites=true&w=majority&appName=Expocon");
         console.log("Connected to the database".bgMagenta);
 
     } catch (error) {
