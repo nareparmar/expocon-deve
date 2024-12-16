@@ -13,6 +13,8 @@ import notAllowedRouter from "./routes/notAllowed.routes.js";
 import attendeeRouter from "./routes/attendee.routes.js";
 import colors from "colors";
 import cors from "cors";
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
 dotenv.config();
 
@@ -21,6 +23,10 @@ app.use(cors({
   origin: "*",
 }));
 app.use(express.json());
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+app.use(express.static(join(__dirname, '../front/build')));
+
 
 app.use("/api/v1/auth", userRouter);
 app.use("/api/v1/badge", badgeRouter);
