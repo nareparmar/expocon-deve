@@ -18,9 +18,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-  origin: ['https://expocon-front.vercel.app'], // Replace with your frontend URL
-  credentials: true,
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  origin: "*",
 }));
 app.use(express.json());
 

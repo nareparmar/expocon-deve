@@ -2,12 +2,12 @@
   "name": "expocon-backend",
   "version": "1.0.0",
   "description": "backend for expocon ",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "nodemonstart": "nodemon index.js"
+    "start": "node app.js",
+    "nodemonstart": "nodemon app.js"
   },
   "repository": {
     "type": "git",
